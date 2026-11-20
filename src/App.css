@@ -1,0 +1,74 @@
+/* ---------- Landing page ---------- */
+.landing-page {
+  background-image:
+    linear-gradient(rgba(10, 35, 20, 0.55), rgba(10, 35, 20, 0.55)),
+    url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1800&q=80');
+  background-color: #2f5d3a; /* fallback if the image can't load */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+.landing-content { max-width: 640px; }
+.landing-content h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); margin: 0; letter-spacing: 0.5px; }
+.tagline { font-size: 1.3rem; margin: 0.5rem 0 1.8rem; font-style: italic; }
+.get-started-btn {
+  background: #e8f3d6; color: #1f4a2b; border: none; border-radius: 999px;
+  padding: 0.9rem 2.4rem; font-size: 1.15rem; font-weight: bold;
+}
+.get-started-btn:hover { background: #fff; }
+.about-us { margin-top: 2.5rem; text-align: left; background: rgba(0,0,0,0.35); padding: 1.2rem 1.5rem; border-radius: 12px; }
+.about-us h2 { margin-top: 0; }
+.about-us p { line-height: 1.6; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #25492f; color: #fff; padding: 0.9rem 2rem; position: sticky; top: 0; z-index: 10;
+}
+.navbar-brand { font-size: 1.4rem; font-weight: bold; }
+.navbar-links { display: flex; gap: 1.8rem; align-items: center; }
+.navbar-links a { color: #e8f3d6; text-decoration: none; cursor: pointer; font-size: 1.05rem; }
+.navbar-links a:hover, .navbar-links a.active { color: #fff; text-decoration: underline; }
+.cart-icon { position: relative; font-size: 1.6rem; }
+.cart-count {
+  position: absolute; top: -8px; right: -12px; background: #f2c14e; color: #25301f;
+  border-radius: 999px; min-width: 22px; height: 22px; font-size: 0.8rem; font-weight: bold;
+  display: flex; align-items: center; justify-content: center; font-family: sans-serif;
+}
+
+/* ---------- Product list ---------- */
+.product-page { padding: 1rem 2rem 3rem; max-width: 1200px; margin: 0 auto; }
+.category-title { border-bottom: 2px solid #b7d3a8; padding-bottom: 0.4rem; margin: 2.2rem 0 1.2rem; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.2rem; }
+.product-card { background: #fff; border-radius: 10px; padding: 0.9rem; text-align: center; border: 1px solid #dde6d3; }
+.product-card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
+.product-card h3 { margin: 0.7rem 0 0.2rem; font-size: 1.05rem; }
+.product-price { font-weight: bold; color: #25492f; margin: 0.2rem 0 0.7rem; }
+.add-btn { background: #25492f; color: #fff; border: none; border-radius: 6px; padding: 0.55rem 1rem; width: 100%; }
+.add-btn:hover:not(:disabled) { background: #1b3823; }
+.add-btn:disabled { background: #b5bfae; cursor: not-allowed; }
+
+/* ---------- Cart ---------- */
+.cart-page { padding: 1rem 2rem 3rem; max-width: 900px; margin: 0 auto; }
+.cart-total { font-size: 1.4rem; font-weight: bold; }
+.cart-item { display: flex; align-items: center; gap: 1.2rem; background: #fff; border: 1px solid #dde6d3; border-radius: 10px; padding: 0.9rem; margin-bottom: 0.9rem; }
+.cart-item img { width: 90px; height: 90px; object-fit: cover; border-radius: 8px; }
+.cart-item-details { flex: 1; }
+.cart-item-details h3 { margin: 0 0 0.3rem; }
+.cart-item-details p { margin: 0.15rem 0; }
+.qty-controls { display: flex; align-items: center; gap: 0.6rem; margin: 0.4rem 0; }
+.qty-btn { width: 32px; height: 32px; border-radius: 50%; border: 1px solid #25492f; background: #fff; font-size: 1.1rem; }
+.qty-btn:hover { background: #e8f3d6; }
+.delete-btn { background: #b3412f; color: #fff; border: none; border-radius: 6px; padding: 0.5rem 0.9rem; }
+.cart-actions { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.continue-btn, .checkout-btn { border: none; border-radius: 8px; padding: 0.8rem 1.6rem; font-size: 1rem; color: #fff; }
+.continue-btn { background: #5b7f66; }
+.checkout-btn { background: #25492f; }
+.empty-cart { text-align: center; padding: 2rem 0; }
